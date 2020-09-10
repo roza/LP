@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="exo4.css">
+    <title>Exo 4</title>
+</head>
+<body>
+    <script>
+        let titre = document.createElement("h1");
+        let texte = document.createTextNode("Mon Titre");
+        titre.appendChild(texte);
+        document.body.appendChild(titre);
+        titre.classList.add("bleu");
+        titre.classList.add("souligne");
+        let paragraphe = document.createElement("p");
+        let contenu = document.createTextNode("Contenu du ");
+        const sp = document.createElement("span");
+        const cont = document.createTextNode("paragraphe");
+        paragraphe.appendChild(contenu);
+        sp.appendChild(cont);
+        sp.style.color = 'red';
+        paragraphe.appendChild(sp);
+        document.body.appendChild(paragraphe);
+
+
+        function ajoute (noeud, dico){
+            let liste = document.createElement("ul");
+            for (let elem in dico){
+                let puce = document.createElement("li");
+                let contenupuce = document.createTextNode(elem + " " + dico['elem']);
+                puce.appendChild(contenupuce);
+                liste.appendChild(puce);
+            }
+            noeud.appendChild(liste);
+        }
+
+        etudiant={
+            'prenom': 'Jean -Claude',
+            'nom': 'Green',
+            'age': 22
+        };
+
+        ajoute(document.body, etudiant);
+    </script>
+</body>
+</html>
