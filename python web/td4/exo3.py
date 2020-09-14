@@ -18,9 +18,9 @@ for q in questions :
         res['vote'].append(int(vote.text))
         res['rep'].append(int(r.text))
         #res.append((quest.text, int(vote.text), int(r.text)))
-print(res)
-df = pd.DataFrame(res, columns= ['Questions', 'Votes', 'Réponses'])
+#print(res)
+df = pd.DataFrame(res)
 
-df.to_csv (r'/home/fbazire/Bureau/LP/python web/td4', index = False, header=True)
+df.to_csv(r'/Users/fabricebazire/Documents/GitHub/LP/python web/td4/data.csv', index = 0, columns=['question', 'vote', 'rep'])
 
-print (df)
+print(df)
