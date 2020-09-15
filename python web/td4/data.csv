@@ -6,7 +6,7 @@ Q: UnicodeEncodeError: 'ascii' codec can't encode character u'\xa0' in position 
 "
 
 Q: How to find elements by class        
-",404,16
+",405,16
 "
 
 Q: can we use xpath with BeautifulSoup?        
@@ -34,7 +34,7 @@ Q: Extracting an attribute value with beautifulsoup
 "
 
 Q: python BeautifulSoup parsing table        
-",82,4
+",83,4
 "
 
 Q: Can I remove script tags with BeautifulSoup?        

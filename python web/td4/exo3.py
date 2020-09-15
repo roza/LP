@@ -15,12 +15,8 @@ for q in questions :
     r = reponses.find("strong")
     for quest in question : 
         res['question'].append(quest.text)
-        res['vote'].append(int(vote.text))
-        res['rep'].append(int(r.text))
-        #res.append((quest.text, int(vote.text), int(r.text)))
-#print(res)
+    res['vote'].append(int(vote.text))
+    res['rep'].append(int(r.text))
 df = pd.DataFrame(res)
 
 df.to_csv(r'/Users/fabricebazire/Documents/GitHub/LP/python web/td4/data.csv', index = 0, columns=['question', 'vote', 'rep'])
-
-print(df)
