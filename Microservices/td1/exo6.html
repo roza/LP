@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Selection de liens en JS</title>
+    </head>
+    <body>
+        <header>
+            <nav id="menu">
+                <ul>
+                    <li><a href="page1.html">Page 1</a></li>
+                    <li><a href="page2.html">Page 2</a></li>
+                    <li><a href="page3.html">Page 3</a></li>
+                    <li><a href="page4.html">Page 4</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <article class="my">
+                <div id="un">
+                    Contenu bla bla ...
+                </div>
+                <div id="deux">
+                    Contenu bli bli ...
+                </div>
+            </article>
+        </section>
+        <input type="button" value="tous les elements" onclick="recup_all()">
+        <input type="button" value="tous les liens" onclick="recup_all_link()">
+        <input type="button" value="tous les liens dans une liste" onclick="recup_all_link_in_liste()">
+        <input type="button" value="dernier lien du menu" onclick="recup_last_link_menu()">
+        <input type="button" value="article de la classe my" onclick="recup_article_class_my()">
+        <input type="button" value="deuxieme div de la classe my" onclick="recup_deuxieme_div_class_my()">
+        <script>
+            function recup_all (){
+                let all = document.querySelectorAll("*");
+                console.log(all);
+            }
+
+            function recup_all_link (){
+                let all = document.querySelectorAll("a");
+                console.log(all);
+            }
+
+            function recup_all_link_in_liste (){
+                let all = document.querySelectorAll("ul a");
+                console.log(all);
+            }
+
+            function recup_last_link_menu (){
+                let all = document.querySelector("#menu>ul>li:last-child a");
+                console.log(all);
+            }
+
+            function recup_article_class_my (){
+                let all = document.querySelector(".my");
+                console.log(all);
+            }
+
+            function recup_deuxieme_div_class_my (){
+                let all = document.querySelector(".my>div:nth-child(2n)");
+                console.log(all);
+            }
+        </script>
+    </body>
+</html>
