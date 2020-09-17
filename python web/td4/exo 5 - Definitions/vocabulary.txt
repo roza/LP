@@ -1,0 +1,3 @@
+voiture
+ordinateur
+smartphone
