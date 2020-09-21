@@ -120,4 +120,12 @@ DATE_INPUT_FORMATS = ('%d/%m/%Y', '%Y-%m-%d')
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+import os
+
+#le dossier static de l'app principale (ici : GestionTaches)
 STATIC_URL = '/static/'
+
+#pour pouvoir mettre des ressources statiques dans les dossiers statiques de chaque app
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
