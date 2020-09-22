@@ -1,0 +1,6 @@
+ifconfig eth0 128.230.31.253/21
+ifconfig eth1 128.230.15.253/21
+
+route add default gw 128.230.15.254
+
+echo 1 > /proc/sys/net/ipv4/ip_forward

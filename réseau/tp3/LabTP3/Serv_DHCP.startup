@@ -1,0 +1,3 @@
+ifconfig eth0 128.230.15.252/21
+route add default gw 128.230.15.254
+/etc/init.d/dhcp3-server start
