@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Les Tableaux JS</title>
+</head>
+<body>
+    <script>
+        const etudiants = ['Jules', 'agatha', 'asterix', 'Idefix', 'Zazou', 'Robert' ];
+
+        function tab_to_list(tableau){
+            ul = document.createElement("ul");
+            for (const etu in tableau) {
+                li_etu = document.createElement("li");
+                etudiant = document.createTextNode(tableau[etu]);
+                li_etu.appendChild(etudiant);
+                ul.appendChild(li_etu);
+            }
+            document.body.appendChild(ul);
+        }
+
+        String.prototype.reverse = function(){
+            console.log(this);
+            let tab = this.split('');
+            console.log(tab);
+            tab = tab.reverse();
+            console.log(tab);
+            document.body.appendChild(document.createTextNode(tab.join(',')));
+        };
+
+        "bonjour".reverse();
+        "hello".reverse();
+    </script>
+</body>
+</html>
