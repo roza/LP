@@ -1,0 +1,29 @@
+{% extends "baseUsers.html"%}
+{% block title %}
+    Les Tâches avec utilisateurs
+{% endblock %}
+{% block styles %}
+    {{ block.super }}
+{% endblock %}
+{% block content %}
+    <h1>Liste des tâches avec Utilisateurs</h1>
+    {% for tache in objects %}
+        <div class="row">
+            <div class="col">{{tache.name}}</div>
+            <div class="col">{{tache.date_creation}}</div>
+            <div class="col">{{tache.colored_due_date}}</div>
+            <div class="col">{{tache.user}}</div>
+            <div>
+                <input type="button" class="btn btn-success" value="Détails" onclick="window.location='http://localhost:8000/taskuser/details/{{tache.pk}}'"> 
+            </div>
+            <div>
+                <input type="button" class="btn btn-warning" value="Modifier" onclick="window.location='http://localhost:8000/taskuser/modifier/{{tache.pk}}'">
+            </div>
+            <div>
+                <input type="button" class="btn btn-danger" value="Supprimer" onclick="window.location='http://localhost:8000/taskuser/supprimer/{{tache.pk}}'"> 
+            </div>
+        </div>
+    {% endfor %}
+    <br>
+    <input type="button" class="btn btn-secondary" value="ajouter une Tache" onclick="window.location='http://localhost:8000/taskuser/add'">
+{% endblock %}

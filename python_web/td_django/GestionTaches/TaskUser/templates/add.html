@@ -1,0 +1,24 @@
+{% extends "baseUsers.html"%}
+{% block title %}
+   Ajouter une tâche
+{% endblock %}
+{% block styles %}
+    {{ block.super }}
+{% endblock %}
+{% block content %}
+    <h1>Ajouter une tâche avec utilisateur</h1>
+    <form action="test.py" method="get" class="form-modif">
+        <label for="name"><b>Nom de la tâche</b></label>
+        <input type="text" name="name" id="name"><br><br>
+        <label for="desc"><b>Description de la tâche</b></label>
+        <textarea name="desc" id="desc" cols="30" rows="3"></textarea><br><br>
+        <label for="date_crea"><b>Date de création de la tâche</b></label>
+        <input type="text" name="date_crea" id="date_crea" ><br><br>
+        <label for="date_rendu"><b>Date de rendu de la tâche</b></label>
+        <input type="text" name="date_rendu" id="date_rendu" ><br><br>
+        <label for="user"><b>Utilistaeur lié à la tâche</b></label>
+        <input type="text" name="user" id="user"><br><br>
+        <input type="submit" class="btn btn-light" value="Valider les modifications" onclick="window.location='http://localhost:8000/taskuser'">
+    </form><
+    <input type="button" class="btn btn-info" value="Retour" onclick="window.location='http://localhost:8000/taskuser'">
+{% endblock %}

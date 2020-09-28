@@ -1,0 +1,38 @@
+{% load static %}
+<html  lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            {% block title %}
+            {% endblock %}
+        </title>
+        {% block metas %}
+            <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+        {% endblock %}
+        {% block styles %}
+            <link rel="stylesheet"href="{%static 'node_modules/bootstrap/dist/css/bootstrap.min.css'%}">
+        {% endblock %}
+    </head>
+    <body>
+        {% block nav %}
+        <nav class="navbar navbar-dark bg-dark justify-content-between">
+            <a class="navbar-brand" href="http://localhost:8000/taskuser"><h1>Gestion des Tâches avec Utilisateurs</h1></a>
+            <form class="form-inline">
+              <input class="form-control mr-sm-2" type="search" placeholder="Rechercher" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
+            </form>
+          </nav>
+        {% endblock %}
+        <main role="main"class="containertop-pushed">
+            <div class="jumbotron">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </main>
+        {% block js %}
+            <script src="{%static 'node_modules/jquery/dist/jquery.slim.min.js'%}"></script>
+            <script src="{%static 'node_modules/bootstrap/dist/js/bootstrap.min.js'%}"></script>
+            <script src="{%static 'node_modules/popper.js/dist/popper.min.js'%}"></script>
+        {% endblock %}
+    </body>
+</html>

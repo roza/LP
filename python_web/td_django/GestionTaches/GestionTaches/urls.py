@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('lesTaches/', include('lesTaches.urls')),
     path('contact/', include('myform.urls')),
+    path('taskuser/', include('TaskUser.urls')),
 ]

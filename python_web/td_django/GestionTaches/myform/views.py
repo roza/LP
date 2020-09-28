@@ -1,7 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.forms import ModelForm, Textarea
 from myform.models import Contact
 from django import forms
+from django.urls import reverse
+from django.http import HttpResponse
+from django.contrib import messages
 
 # Create your views here.
 
@@ -24,4 +27,4 @@ def contact(request):
     #returnrender(request,'myform/conctact.html',{'contact_form':contact_form})
     contact_form2 = ContactForm2()
     print('contact view')
-    return render(request,'conctact.html',{'contact_form':contact_form,'contact_form2':contact_form2})
+    return render(request,template_name='conctact.html',context={'contact_form':contact_form,'contact_form2':contact_form2})

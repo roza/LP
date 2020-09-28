@@ -1,0 +1,33 @@
+div{
+    display: flex;
+}
+
+article{
+    flex : 1;
+}
+
+.more{
+    display: flex;
+}
+
+a{
+    justify-content: flex-end;
+}
+
+.row{
+    display: flex;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid gray;
+    padding : 2%;
+    flex : 1 1 33.33%;
+}
+
+.card .more{
+    background-color: gray;
+    padding: 15px;
+    margin-top: auto;
+}
