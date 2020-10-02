@@ -5,7 +5,7 @@
 {% block content %}
 
     <h1>Modifier la tâche</h1>
-    <form action="/taskuser/modifier/{{objects.pk}}" method="POST" class="form-modif">
+    <form action="/taskuser/add" method="POST" class="form-modif">
         {% csrf_token %}
         <div class="row">
             <div >
@@ -25,7 +25,7 @@
             </div>
         </div>
         <button type="submit" class="btn btn-light">
-            Enregistrer les Modifications
+            Ajouter la tâche
         </button>
     </form>
     <input type="button" class="btn btn-info" value="Retour" onclick="window.location='http://localhost:8000/taskuser'">

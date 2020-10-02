@@ -13,7 +13,7 @@ class User(models.Model):
 class TaskWithUser(models.Model):
     name = models.CharField(max_length=250)
     description = models.TextField()
-    date_creation  = models.DateField(auto_now_add=True)
+    date_creation  = models.DateField()
     date_rendu = models.DateField(null=True)
     user = models.ForeignKey(User, related_name = "user", on_delete=models.CASCADE)
 
