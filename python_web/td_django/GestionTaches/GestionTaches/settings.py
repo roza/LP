@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'lesTaches',
     'myform',
     'TaskUser',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [

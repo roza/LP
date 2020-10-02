@@ -15,7 +15,6 @@ class TaskWithUser(models.Model):
     description = models.TextField()
     date_creation  = models.DateField(auto_now_add=True)
     date_rendu = models.DateField(null=True)
-    closed = models.BooleanField(default=False)
     user = models.ForeignKey(User, related_name = "user", on_delete=models.CASCADE)
 
     def __str__(self):

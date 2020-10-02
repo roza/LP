@@ -7,7 +7,8 @@
 {% endblock %}
 {% block content %}
     <h1>Ajouter une tâche avec utilisateur</h1>
-    <form action="test.py" method="get" class="form-modif">
+    <form action="" method="POST" class="form-ajout">
+        {% csrf_token %}
         <label for="name"><b>Nom de la tâche</b></label>
         <input type="text" name="name" id="name"><br><br>
         <label for="desc"><b>Description de la tâche</b></label>
@@ -17,8 +18,13 @@
         <label for="date_rendu"><b>Date de rendu de la tâche</b></label>
         <input type="text" name="date_rendu" id="date_rendu" ><br><br>
         <label for="user"><b>Utilistaeur lié à la tâche</b></label>
-        <input type="text" name="user" id="user"><br><br>
+        <select name="user" id="user">
+            <option value="">Choisir un utilisateur</option>
+            {% for user in users %}
+                <option value="{{user}}">{{user}}</option>
+            {% endfor %}
+            </select><br><br>
         <input type="submit" class="btn btn-light" value="Valider les modifications" onclick="window.location='http://localhost:8000/taskuser'">
-    </form><
+    </form>
     <input type="button" class="btn btn-info" value="Retour" onclick="window.location='http://localhost:8000/taskuser'">
 {% endblock %}

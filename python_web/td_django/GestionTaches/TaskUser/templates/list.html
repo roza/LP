@@ -6,7 +6,14 @@
     {{ block.super }}
 {% endblock %}
 {% block content %}
-    <h1>Liste des tâches avec Utilisateurs</h1>
+    <h1>Liste des tâches avec Utilisateurs</h1><br>
+    <div class="row">
+        <div class="col"><b>Nom de la tâche</b></div>
+        <div class="col"><b>Date de création</b></div>
+        <div class="col"><b>Date de rendue</b></div>
+        <div class="col"><b>Utilistaeur associé à la tâche</b></div>
+        <div class="col"><b></b></div>
+    </div><br>
     {% for tache in objects %}
         <div class="row">
             <div class="col">{{tache.name}}</div>
@@ -23,6 +30,7 @@
                 <input type="button" class="btn btn-danger" value="Supprimer" onclick="window.location='http://localhost:8000/taskuser/supprimer/{{tache.pk}}'"> 
             </div>
         </div>
+        <br>
     {% endfor %}
     <br>
     <input type="button" class="btn btn-secondary" value="ajouter une Tache" onclick="window.location='http://localhost:8000/taskuser/add'">

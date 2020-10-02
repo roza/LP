@@ -6,14 +6,14 @@
     {{ block.super }}
 {% endblock %}
 {% block content %}
-    <h1>Détails de la tâche</h1>
+    <h1>Détails de la tâche</h1><br>
     <div class="row">
         <div class="col"><b>Nom de la tâche</b></div>
         <div class="col"><b>Description de la tâche</b></div>
         <div class="col"><b>Date de création</b></div>
         <div class="col"><b>Date de rendue</b></div>
         <div class="col"><b>Utilistaeur associé à la tâche</b></div>
-    </div>
+    </div><br>
         <div class="row">
             <div class="col">{{objects.name}}</div>
             <div class="col">{{objects.description}}</div>
@@ -24,4 +24,5 @@
         <br>
     <input type="button" class="btn btn-info" value="Retour" onclick="window.location='http://localhost:8000/taskuser'">
     <input type="button" class="btn btn-warning" value="Modifier" onclick="window.location='http://localhost:8000/taskuser/modifier/{{objects.pk}}'">
+    <input type="button" class="btn btn-danger" value="Supprimer" onclick="window.location='http://localhost:8000/taskuser/supprimer/{{objects.pk}}'">
 {% endblock %}
